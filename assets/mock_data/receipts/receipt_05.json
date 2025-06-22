@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250620-005",
+  "purchaseDate": "2025-06-20T12:05:00Z",
+  "items": [
+    {
+      "id": "uuid-beans-1",
+      "name": "Canned Black Beans 400g",
+      "quantity": 2,
+      "unit": "pcs",
+      "expiryDate": "2027-06-20T00:00:00Z",
+      "cost": 1.00,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-avocado-1",
+      "name": "Avocado 2pcs",
+      "quantity": 2,
+      "unit": "pcs",
+      "expiryDate": "2025-06-24T00:00:00Z",
+      "cost": 2.50,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-honey-1",
+      "name": "Honey 500g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2028-06-20T00:00:00Z",
+      "cost": 4.00,
+      "allergens": [],
+      "dietaryTags": ["vegetarian","gluten-free","nut-free"]
+    }
+  ]
+}
