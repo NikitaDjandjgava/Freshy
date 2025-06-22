@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250619-004",
+  "purchaseDate": "2025-06-19T18:30:00Z",
+  "items": [
+    {
+      "id": "uuid-tomato-1",
+      "name": "Tomato 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "expiryDate": "2025-06-23T00:00:00Z",
+      "cost": 2.10,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-cheese-1",
+      "name": "Cheddar Cheese 200g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-28T00:00:00Z",
+      "cost": 3.20,
+      "allergens": ["milk"],
+      "dietaryTags": ["vegetarian","gluten-free"]
+    },
+    {
+      "id": "uuid-fish-1",
+      "name": "Salmon Fillet 500g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-21T00:00:00Z",
+      "cost": 6.00,
+      "allergens": ["fish"],
+      "dietaryTags": ["gluten-free","nut-free"]
+    }
+  ]
+}
