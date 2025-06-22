@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250618-003",
+  "purchaseDate": "2025-06-18T09:10:00Z",
+  "items": [
+    {
+      "id": "uuid-chicken-1",
+      "name": "Chicken Breast 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "expiryDate": "2025-06-20T00:00:00Z",
+      "cost": 5.50,
+      "allergens": [],
+      "dietaryTags": ["gluten-free"]
+    },
+    {
+      "id": "uuid-broccoli-1",
+      "name": "Broccoli 500g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-22T00:00:00Z",
+      "cost": 1.75,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-rice-1",
+      "name": "White Rice 1kg",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2026-06-18T00:00:00Z",
+      "cost": 2.20,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free"]
+    }
+  ]
+}
