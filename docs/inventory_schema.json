@@ -1,0 +1,60 @@
+# Inventory Item JSON Schema
+
+Each “food item” in inventory is represented as an object conforming to this schema:
+
+```jsonc
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InventoryItem",
+  "type": "object",
+  "required": ["id","name","category","quantity","expiryDate"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique item identifier (UUID or SKU)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name, e.g. 'Organic Large Eggs (12)'."
+    },
+    "quantity": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Number of units."
+    },
+    "unit": {
+      "type": "string",
+      "description": "Measurement unit (e.g. 'pcs','g','L')."
+    },
+    "expiryDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 expiry date (e.g. '2025-06-19T00:00:00Z')."
+    },
+    "purchaseDate": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 purchase date."
+    },
+    "cost": {
+      "type": "number",
+      "minimum": 0,
+      "description": "Cost paid, for analytics (e.g. 2.99)."
+    },
+    "allergens": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of allergen keywords (e.g. 'eggs','gluten')."
+    },
+    "dietaryTags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["vegetarian","vegan","gluten-free","dairy-free","nut-free"]
+      },
+      "description": "Dietary suitability tags."
+    },
+  }
+}
+
