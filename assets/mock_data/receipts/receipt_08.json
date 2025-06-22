@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250623-008",
+  "purchaseDate": "2025-06-23T10:15:00Z",
+  "items": [
+    {
+      "id": "uuid-carrots-1",
+      "name": "Carrots 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "expiryDate": "2025-06-27T00:00:00Z",
+      "cost": 1.20,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-groundbeef-1",
+      "name": "Ground Beef 500g",
+      "quantity": 1,
+      "unit": "kg",
+      "expiryDate": "2025-06-25T00:00:00Z",
+      "cost": 4.50,
+      "allergens": [],
+      "dietaryTags": ["gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-cheerio-1",
+      "name": "Oat Cereal 375g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-12-01T00:00:00Z",
+      "cost": 3.30,
+      "allergens": ["gluten"],
+      "dietaryTags": ["vegetarian"]
+    }
+  ]
+}
