@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250617-002",
+  "purchaseDate": "2025-06-17T14:45:00Z",
+  "items": [
+    {
+      "id": "uuid-bread-1",
+      "name": "Whole Wheat Bread Loaf",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-22T00:00:00Z",
+      "cost": 2.50,
+      "allergens": ["gluten"],
+      "dietaryTags": ["vegetarian"]
+    },
+    {
+      "id": "uuid-apples-1",
+      "name": "Fuji Apples 1kg",
+      "quantity": 2,
+      "unit": "pcs",
+      "expiryDate": "2025-06-25T00:00:00Z",
+      "cost": 3.00,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free"]
+    },
+    {
+      "id": "uuid-yogurt-1",
+      "name": "Greek Yogurt 500g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-21T00:00:00Z",
+      "cost": 1.80,
+      "allergens": ["milk"],
+      "dietaryTags": ["vegetarian","gluten-free"]
+    }
+  ]
+}
