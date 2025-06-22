@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250621-006",
+  "purchaseDate": "2025-06-21T08:20:00Z",
+  "items": [
+    {
+      "id": "uuid-spinach-1",
+      "name": "Baby Spinach 200g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-23T00:00:00Z",
+      "cost": 2.30,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-saltnpepper-1",
+      "name": "Salt & Pepper Grinder",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2026-06-21T00:00:00Z",
+      "cost": 3.50,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-juice-1",
+      "name": "Orange Juice 1L",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-07-01T00:00:00Z",
+      "cost": 2.80,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    }
+  ]
+}
