@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250625-010",
+  "purchaseDate": "2025-06-25T17:05:00Z",
+  "items": [
+    {
+      "id": "uuid-yam-1",
+      "name": "Sweet Potatoes 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "expiryDate": "2025-06-29T00:00:00Z",
+      "cost": 2.00,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-almondmilk-1",
+      "name": "Almond Milk 1L",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-30T00:00:00Z",
+      "cost": 2.80,
+      "allergens": ["nuts"],
+      "dietaryTags": ["vegan","gluten-free","dairy-free"]
+    },
+    {
+      "id": "uuid-chocolate-1",
+      "name": "Dark Chocolate 100g",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2026-06-25T00:00:00Z",
+      "cost": 3.00,
+      "allergens": ["nuts"],
+      "dietaryTags": ["vegetarian"]
+    }
+  ]
+}
