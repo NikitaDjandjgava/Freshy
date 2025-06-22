@@ -1,0 +1,36 @@
+{
+  "receiptId": "R-20250624-009",
+  "purchaseDate": "2025-06-24T13:50:00Z",
+  "items": [
+    {
+      "id": "uuid-bananas-1",
+      "name": "Bananas 1kg",
+      "quantity": 1,
+      "unit": "kg",
+      "expiryDate": "2025-06-26T00:00:00Z",
+      "cost": 1.10,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    },
+    {
+      "id": "uuid-cream-1",
+      "name": "Heavy Cream 500ml",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2025-06-28T00:00:00Z",
+      "cost": 2.40,
+      "allergens": ["milk"],
+      "dietaryTags": ["vegetarian","gluten-free"]
+    },
+    {
+      "id": "uuid-oliveoil-1",
+      "name": "Extra Virgin Olive Oil 500ml",
+      "quantity": 1,
+      "unit": "pcs",
+      "expiryDate": "2027-06-24T00:00:00Z",
+      "cost": 6.50,
+      "allergens": [],
+      "dietaryTags": ["vegan","gluten-free","nut-free"]
+    }
+  ]
+}
