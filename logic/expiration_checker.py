@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 # /logic/expiration_checker.py
 
-from datetime import datetime
+from datetime import datetime, date
 import json
 import os
 
 # --- Configuration ---
 THRESHOLD_DAYS = 3
-TODAY = datetime(2025, 6, 16)  # fixed “today” for consistency
+TODAY = date.today()
 
 def load_receipt(path):
     """Load a single receipt JSON and return its 'items' list."""
@@ -21,8 +21,9 @@ def find_soon_to_expire(items):
     for item in items:
         exp_str = item.get('expiryDate')
         try:
-            exp = datetime.fromisoformat(exp_str.replace('Z',''))
-        except Exception:
+            exp = datetime.fromisoformat(exp_str.replace('Z','')).date()
+        except Exception as e:
+            print(f"Skipping item due to invalid date: {exp_str} ({e})")
             continue  # skip invalid dates
         days_left = (exp - TODAY).days
         if 0 <= days_left <= THRESHOLD_DAYS:
@@ -34,6 +35,7 @@ def find_soon_to_expire(items):
     return soon
 
 def main():
+    """Scan receipts and print items expiring within threshold."""
     receipts_dir = os.path.join(os.path.dirname(__file__), '../assets/mock_data/receipts')
     for fname in sorted(os.listdir(receipts_dir)):
         if not fname.endswith('.json'):
