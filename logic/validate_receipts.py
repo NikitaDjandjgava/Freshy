@@ -12,28 +12,43 @@ def load_receipts(receipts_dir):
     for fname in sorted(os.listdir(receipts_dir)):
         if fname.endswith(".json"):
             path = os.path.join(receipts_dir, fname)
-            with open(path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                receipts.append((fname, data))
+            try:
+                with open(path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    receipts.append((fname, data))
+            except Exception as e:
+                print(f"Error loading {fname}: {e}")
     return receipts
 
 
 def print_receipt_summary(filename, receipt):
     """Print a formatted summary of a single receipt."""
     print(f"\n===== {filename} =====")
-    print(f"Receipt ID:     {receipt.get('receiptId')}")
-    print(f"Purchase Date:  {receipt.get('purchaseDate')}")
+    print(f"Receipt ID:     {receipt.get('receiptId', 'N/A')}")
+    print(f"Purchase Date:  {receipt.get('purchaseDate', 'N/A')}")
     items = receipt.get('items', [])
     print(f"Number of items: {len(items)}")
 
     for i, item in enumerate(items, 1):
-        print(f"  {i}. {item['name']}")
-        print(f"     ID: {item['id']}")
-        print(f"     Quantity: {item['quantity']} {item.get('unit', '')}")
-        print(f"     Expiry: {item['expiryDate']}")
-        print(f"     Cost: €{item['cost']:.2f}")
-        print(f"     Allergens: {', '.join(item.get('allergens', [])) or 'None'}")
-        print(f"     Dietary Tags: {', '.join(item.get('dietaryTags', [])) or 'None'}")
+        print(f"  {i}. {item.get('name', 'Unnamed Item')}")
+        print(f"     ID: {item.get('id', 'N/A')}")
+        print(f"     Quantity: {item.get('quantity', 'N/A')} {item.get('unit', '')}")
+        
+        expiry_raw = item.get('expiryDate', 'N/A')
+        try:
+            datetime.fromisoformat(expiry_raw.replace('Z', ''))
+            expiry_display = expiry_raw
+        except Exception:
+            expiry_display = "Invalid date format"
+        print(f"     Expiry: {expiry_display}")
+        
+        cost = item.get('cost', 0.0)
+        print(f"     Cost: €{cost:.2f}")
+        
+        allergens = ', '.join(item.get('allergens', [])) or 'None'
+        tags = ', '.join(item.get('dietaryTags', [])) or 'None'
+        print(f"     Allergens: {allergens}")
+        print(f"     Dietary Tags: {tags}")
 
 
 def main():
